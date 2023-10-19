@@ -1,4 +1,4 @@
-package com.example.webflux_websocket.handler
+package com.example.rxWebsocket.handler
 
 import org.springframework.web.reactive.socket.WebSocketHandler
 import org.springframework.web.reactive.socket.WebSocketSession

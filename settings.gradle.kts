@@ -1,1 +1,1 @@
-rootProject.name = "webflux_websocket"
+rootProject.name = "rx-websocket"

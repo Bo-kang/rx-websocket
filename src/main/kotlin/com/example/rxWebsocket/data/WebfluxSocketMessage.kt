@@ -1,4 +1,4 @@
-package com.example.webflux_websocket.data
+package com.example.rxWebsocket.data
 
 import java.time.Instant
 

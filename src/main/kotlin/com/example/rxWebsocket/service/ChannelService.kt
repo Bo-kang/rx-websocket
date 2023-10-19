@@ -1,4 +1,4 @@
-package com.example.webflux_websocket.service
+package com.example.rxWebsocket.service
 
 import org.springframework.stereotype.Service
 import org.springframework.web.reactive.socket.WebSocketSession

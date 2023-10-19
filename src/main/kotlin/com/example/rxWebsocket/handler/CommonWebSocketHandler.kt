@@ -1,6 +1,6 @@
-package com.example.webflux_websocket.handler
+package com.example.rxWebsocket.handler
 
-import com.example.webflux_websocket.service.ChannelService
+import com.example.rxWebsocket.service.ChannelService
 import org.springframework.web.reactive.socket.WebSocketHandler
 import org.springframework.web.reactive.socket.WebSocketSession
 import reactor.core.publisher.Flux

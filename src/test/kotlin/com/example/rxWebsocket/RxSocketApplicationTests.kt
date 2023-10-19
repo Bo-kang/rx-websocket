@@ -1,10 +1,10 @@
-package com.example.webflux_websocket
+package com.example.rxWebsocket
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class WebfluxWebsocketApplicationTests {
+class RxSocketApplicationTests {
 
     @Test
     fun contextLoads() {

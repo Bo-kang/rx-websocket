@@ -1,11 +1,11 @@
-package com.example.webflux_websocket
+package com.example.rxWebsocket
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class WebfluxWebsocketApplication
+class RxSocketApplication
 
 fun main(args: Array<String>) {
-    runApplication<WebfluxWebsocketApplication>(*args)
+    runApplication<RxSocketApplication>(*args)
 }
