@@ -3,6 +3,8 @@ package com.example.rxWebsocket.service
 import org.springframework.stereotype.Service
 import org.springframework.web.reactive.socket.WebSocketSession
 import reactor.core.publisher.Flux
+import reactor.core.publisher.Mono
+import reactor.kotlin.core.publisher.toFlux
 
 @Service
 class ChannelService {
@@ -19,9 +21,20 @@ class ChannelService {
 
     fun sendMessage(channelId: Int, message : String): Flux<String> {
         channelMessage[channelId]?.add(message)
-        return Flux.just(message)
+        println(channelMessage[channelId])
+        println("AFTER sendMessage")
+        receivedMessage.map { Mono.just(message) }
+        return tmpMessage
     }
 
+    fun receiveMessage(channelId : Int): Flux<String> {
+        return tmpMessage
+    }
 
+    val tmpMessage = Flux.fromIterable(channelMessage[1]!!).doOnNext {
+        println("tmpMessage : $it")
+    }
+
+    val receivedMessage = Mono.just("")
 
 }
