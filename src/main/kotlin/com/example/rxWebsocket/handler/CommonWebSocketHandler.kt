@@ -40,22 +40,6 @@ class CommonWebSocketHandler(
                 messageKafkaService.sendMessage(it.payloadAsText)
             }.then()
 
-
-//        val message = channelService.receiveMessage(channelId)
-//            .defaultIfEmpty("EMPTY")
-//            .map {
-//                println(it)
-//                session.textMessage(it)
-//            }
-
-//        val message = Flux.interval(Duration.ofSeconds(5)).map {
-//            session.textMessage(Instant.now().toString())
-//        }
-//        val message = messageKafkaService.receiveMessage().map {
-//            println("${session.id} - RECEIVE  ${it.value()?.get("message")}")
-//            session.textMessage((it.value()?.get("message") as String?) ?: "NONE")
-//        }
-
         val message = messageKafkaService.producedData().map {
             println("${session.id} - RECEIVE  ${it?.get("message")}")
             session.textMessage((it?.get("message") as String?) ?: "NONE")
